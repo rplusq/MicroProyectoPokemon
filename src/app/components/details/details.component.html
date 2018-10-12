@@ -15,18 +15,18 @@
     </div>
     <br>
     <div *ngIf="hasEvolutions">
-      <div *ngFor="let evolution of selected.evolutions; let i = index">
+      <div *ngFor="let evolution of evolutions; let i = index">
         <div>
-            <span class=title>Evolution: </span> {{ i }}a:
+            <span class=title>Evolution: </span> {{ i+1 }}:
         </div>
         <br>
         <div>
-          Name: {{ evolutions[i].name }}
+          Name: {{ evolution.name }}
         </div>
         <br>
-        <img [src]="evolutions[i].art_url">
+        <img [src]="evolution.art_url">
         <br>
-        <div>
+        <div *ngIf="evolution.level">
           Level to for the Evolution: {{ evolution.level }}
         </div>
         <br>
