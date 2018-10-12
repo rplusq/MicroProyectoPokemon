@@ -1,0 +1,7 @@
+.thumbnail{
+    width: 150px;
+    height: 150px;
+}
+.clickable{
+    cursor: pointer;
+}

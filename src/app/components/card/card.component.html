@@ -1,0 +1,7 @@
+<div class="card m-3 clickable" (click)="checkPokemonDetails(pokemon.name)">
+    <div class="card-body text-center">
+      <h6>{{ pokemon.name }}</h6>
+      <img [src]="pokemon.art_url" alt="" class="thumbnail">
+    <h6> Pokedex #: {{ pokemon.pkdx_id }}</h6>
+  </div>
+</div>
