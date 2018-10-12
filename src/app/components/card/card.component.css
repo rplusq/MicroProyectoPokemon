@@ -1,7 +1,28 @@
 .thumbnail{
-    width: 150px;
-    height: 150px;
+    width: 100%;
 }
 .clickable{
     cursor: pointer;
+}
+
+.card {
+    box-shadow: 2px 2px 10px #000000;
+    margin-top: 30px; 
+    background: #F2F2F2;
+}
+
+.display-5 {
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.number {
+    font-size: 13px;
+    color: #919191;
+}
+
+.name {
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(34, 32, 32);
 }

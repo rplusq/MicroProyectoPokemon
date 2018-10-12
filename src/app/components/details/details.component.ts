@@ -25,7 +25,7 @@ export class DetailsComponent implements OnInit {
       this.pokedex = data;
       this.selected = this.searchForPokemon(this.ar.snapshot.queryParams.name);
       console.log(this.selected);
-      if(this.selected.evolutions[0]){
+      if (this.selected.evolutions[0]) {
         this.hasEvolutions = true;
         for (const evolution of this.selected.evolutions) {
           this.evolutions.push(this.searchForPokemon(evolution.to));
@@ -35,9 +35,9 @@ export class DetailsComponent implements OnInit {
     });
   }
 
-  searchForPokemon(name: string){
+  searchForPokemon(name: string) {
     for (const pokemon of this.pokedex) {
-      if(name === pokemon.name){
+      if (name === pokemon.name) {
         return pokemon;
       }
     }

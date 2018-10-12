@@ -1,36 +1,40 @@
-<div *ngIf="!isLoading">
-  <div>
-    Name: {{ selected.name }}
-  </div>
-  <br>
-  <div>
-    Description: {{ selected.description }}
-  </div>
-  <br>
-  <div>
-    Types: <p *ngFor="let type of selected.types"> {{ type }} </p>
-  </div>
-  <br>
-  <div *ngIf="hasEvolutions">
-    <div *ngFor="let evolution of selected.evolutions; let i = index">
-      <div>
-        Evolution {{ i }}:
+<a routerLink="/home"><i class="fa fa-caret-square-o-left"></i> Back to Home</a>
+
+<div class="container mt-5">
+  <div *ngIf="!isLoading">
+    <div>
+      <span class=title>Name: </span>{{ selected.name }}
+    </div>
+    <br>
+    <div>
+      <span class=title>Description: </span>{{ selected.description }}
+    </div>
+    <br>
+    <div>
+        <span class=title>Types: </span><p *ngFor="let type of selected.types"> {{ type }} </p>
+    </div>
+    <br>
+    <div *ngIf="hasEvolutions">
+      <div *ngFor="let evolution of selected.evolutions; let i = index">
+        <div>
+            <span class=title>Evolution: </span> {{ i }}a:
+        </div>
+        <br>
+        <div>
+          Name: {{ evolutions[i].name }}
+        </div>
+        <br>
+        <img [src]="evolutions[i].art_url">
+        <br>
+        <div>
+          Level to for the Evolution: {{ evolution.level }}
+        </div>
+        <br>
+        <div>
+          Method for the Evolution: {{ evolution.method }}
+        </div>
+        <br>
       </div>
-      <br>
-      <div>
-        Name: {{ evolutions[i].name }}
-      </div>
-      <br>
-      <img [src]="evolutions[i].art_url">
-      <br>
-      <div>
-        Level to for the Evolution: {{ evolution.level }}
-      </div>
-      <br>
-      <div>
-        Method for the Evolution: {{ evolution.method }}
-      </div>
-      <br>
     </div>
   </div>
 </div>

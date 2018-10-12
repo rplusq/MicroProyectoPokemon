@@ -1,7 +1,7 @@
-<div class="card m-3 clickable" (click)="checkPokemonDetails(pokemon.name)">
-    <div class="card-body text-center">
-      <h6>{{ pokemon.name }}</h6>
-      <img [src]="pokemon.art_url" alt="" class="thumbnail">
-    <h6> Pokedex #: {{ pokemon.pkdx_id }}</h6>
+<div class="card clickable" (click)="checkPokemonDetails(pokemon.name)">
+  <img class="card-img-top thumbnail bg-dark p-2" [src]="pokemon.art_url" alt="pokemon image">
+  <div class="card-body text-center">
+    <h5 class="number text-left"> N.° {{ pokemon.pkdx_id | number:"3.0" }}</h5>
+    <h5 class="name text-left">{{ pokemon.name }}</h5>
   </div>
 </div>
