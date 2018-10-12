@@ -1,21 +1,35 @@
 <div *ngIf="!isLoading">
-  Name: {{ selected.name }}
+  <div>
+    Name: {{ selected.name }}
+  </div>
   <br>
-  Description: {{ selected.description }}
+  <div>
+    Description: {{ selected.description }}
+  </div>
   <br>
-  Types: <p *ngFor="let type of selected.types"> {{ type }} </p>
+  <div>
+    Types: <p *ngFor="let type of selected.types"> {{ type }} </p>
+  </div>
   <br>
   <div *ngIf="hasEvolutions">
     <div *ngFor="let evolution of selected.evolutions; let i = index">
-      Evolution {{ i }}:
+      <div>
+        Evolution {{ i }}:
+      </div>
       <br>
-      Name: {{ evolutions[i].name }}
+      <div>
+        Name: {{ evolutions[i].name }}
+      </div>
       <br>
       <img [src]="evolutions[i].art_url">
       <br>
-      Level to for the Evolution: {{ evolution.level }}
+      <div>
+        Level to for the Evolution: {{ evolution.level }}
+      </div>
       <br>
-      Method for the Evolution: {{ evolution.method }}
+      <div>
+        Method for the Evolution: {{ evolution.method }}
+      </div>
       <br>
     </div>
   </div>
