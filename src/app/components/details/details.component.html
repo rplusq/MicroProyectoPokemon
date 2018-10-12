@@ -2,40 +2,62 @@
 
 <div class="container mt-5">
   <div *ngIf="!isLoading">
-    <div>
-      <span class=title>Name: </span>{{ selected.name }}
-      <img [src]="selected.art_url" alt="">
+    <!-- Info pokemon -->
+    <h4 class="display-4 text-center mb-4">Info Pokemon</h4>
+    <div class="card bg-dark">
+        <p class="text-center imagen"><img [src]="selected.art_url" alt=""></p>
+        <hr>
+        <div>
+          <span class=title>Name: </span>{{ selected.name }}
+        </div>
+    
+        <br>
+    
+        <div>
+          <span class=title>Description: </span>{{ selected.description }}
+        </div>
+    
+        <br>
+        
+        <div>
+            <span class=title>Types: </span><p *ngFor="let type of selected.types"><span class="badge badge-info">{{ type }}</span></p>
+        </div>
     </div>
+
     <br>
-    <div>
-      <span class=title>Description: </span>{{ selected.description }}
-    </div>
-    <br>
-    <div>
-        <span class=title>Types: </span><p *ngFor="let type of selected.types"> {{ type }} </p>
-    </div>
-    <br>
+    <!-- Info evoluciones -->
     <div *ngIf="hasEvolutions">
+      <h4 class="display-4 text-center mb-4">Info Evolutions</h4>
       <div *ngFor="let evolution of evolutions; let i = index">
-        <div>
-            <span class=title>Evolution: </span> {{ i+1 }}:
+        <div class="card evol">
+            <p class="text-center imagen"><img [src]="evolution.art_url" alt=""></p>
+            <hr>
+            <div>
+                <span class=title>Evolution: </span> {{ i+1 }}
+            </div>
+    
+            <br>
+    
+            <div>
+              <span class=title>Name: </span>{{ evolution.name }}
+            </div>
+    
+            <br>
+    
+    
+            <div *ngIf="evolution.level">
+                <span class=title>Level for the evolution: </span>{{ evolution.level }}
+            </div>
+    
+            <br>
+    
+            <div>
+                <span class=title>Method for the evolution: </span>{{ evolution.method }}
+            </div>
         </div>
-        <br>
-        <div>
-          Name: {{ evolution.name }}
-        </div>
-        <br>
-        <img [src]="evolution.art_url">
-        <br>
-        <div *ngIf="evolution.level">
-          Level to for the Evolution: {{ evolution.level }}
-        </div>
-        <br>
-        <div>
-          Method for the Evolution: {{ evolution.method }}
-        </div>
-        <br>
+
       </div>
     </div>
+
   </div>
 </div>
