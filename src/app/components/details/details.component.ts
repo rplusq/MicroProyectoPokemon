@@ -10,7 +10,7 @@ import { Pokemon } from 'src/app/models/Pokemon';
 })
 export class DetailsComponent implements OnInit {
   pokedex: Pokemon[];
-  jsonPath = 'src/app/json/pokemons.json';
+  jsonPath = 'assets/json/pokemons.json';
   hasEvolutions: boolean;
   selected: any;
   evolutions: any[];

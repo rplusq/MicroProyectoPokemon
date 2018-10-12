@@ -10,7 +10,7 @@ import { FetchService } from 'src/app/services/fetch.service';
 })
 export class HomeComponent implements OnInit {
   pokedex: Pokemon[];
-  jsonPath = 'src/app/json/pokemons.json';
+  jsonPath = 'assets/json/pokemons.json';
   
 
   constructor(private fs: FetchService) { }
